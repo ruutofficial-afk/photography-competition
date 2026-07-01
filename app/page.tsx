@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Camera, Calendar, Trophy, ChevronDown, Sparkles } from 'lucide-react';
 import SubmissionForm from '../components/SubmissionForm';
 import SuccessScreen from '../components/SuccessScreen';
@@ -165,6 +166,74 @@ export default function Home() {
           )}
 
 
+        </div>
+      </section>
+
+      {/* 2.5 RULES AND GUIDELINES SECTION */}
+      <section className="relative w-full py-8 px-4 flex flex-col items-center justify-center z-10 max-w-4xl mx-auto select-none">
+        <div className="w-full bg-[#F9F6F0] border-4 border-[#664436] rounded-3xl p-6 sm:p-8 shadow-md">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b-2 border-dashed border-[#664436]/20 pb-4 mb-6 gap-2">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-black uppercase text-[#664436] font-heading">
+                Rules & Guidelines
+              </h2>
+              <p className="text-[11px] font-bold uppercase tracking-widest text-[#895158]">
+                Read carefully before submitting
+              </p>
+            </div>
+            <Link
+              href="/rules"
+              className="text-xs font-black uppercase tracking-widest text-[#895158] hover:text-[#e28d1c] transition-colors border-2 border-[#895158] px-4 py-1.5 rounded-full hover:bg-[#895158] hover:text-[#F9F6F0] w-fit"
+            >
+              Open Full Rules Page
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-[#664436] font-semibold">
+            {/* The Brief / Allowed */}
+            <div className="flex flex-col gap-4">
+              <div>
+                <h3 className="text-xs font-black uppercase tracking-wider text-[#895158] mb-1">
+                  The Brief
+                </h3>
+                <p className="text-xs leading-relaxed text-[#664436]/90 font-semibold">
+                  Find an ordinary, chaotic, or "ugly" location in your city (e.g. packed street market, narrow alleyway, tea stall) and capture it using framing and lighting to make it look like a premium, luxury escape.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xs font-black uppercase tracking-wider text-[#895158] mb-1">
+                  What is Allowed
+                </h3>
+                <ul className="list-disc pl-4 text-xs flex flex-col gap-1 text-[#664436]/90 font-bold">
+                  <li>Photography from any device (Smartphone, DSLR, Film).</li>
+                  <li>Lightroom color grading, exposure, crop adjustments.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Timelines / Banned */}
+            <div className="flex flex-col gap-4">
+              <div>
+                <h3 className="text-xs font-black uppercase tracking-wider text-[#895158] mb-1">
+                  Strictly Prohibited
+                </h3>
+                <ul className="list-disc pl-4 text-xs flex flex-col gap-1 text-red-700 font-bold">
+                  <li>AI-Generated Imagery: Zero-tolerance policy (Midjourney, generative fill, etc.).</li>
+                  <li>Digital Manipulation: Do not add or remove physical objects.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xs font-black uppercase tracking-wider text-[#895158] mb-1">
+                  Prizes
+                </h3>
+                <p className="text-xs leading-relaxed text-[#664436]/90 font-semibold">
+                  **Grand Winner**: Jordan Shoes + ṚUUT Signature Hamper + permanent digital feature. **Runner-Up & Public Choice**: ṚUUT Signature Hampers.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
