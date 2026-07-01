@@ -24,6 +24,7 @@ const submissionValidationSchema = z.object({
     }
     return age >= 13;
   }, 'You must be at least 13 years old to participate.'),
+  address: z.string().min(5, 'Address must be at least 5 characters.'),
   story: z.string()
     .min(50, 'Story must be at least 50 characters.')
     .max(1000, 'Story cannot exceed 1000 characters.'),
@@ -45,6 +46,7 @@ export async function POST(req: NextRequest) {
     const mobileNumber = formData.get('mobileNumber')?.toString() || '';
     const email = formData.get('email')?.toString() || '';
     const dob = formData.get('dob')?.toString() || '';
+    const address = formData.get('address')?.toString() || '';
     const story = formData.get('story')?.toString() || '';
     const location = formData.get('location')?.toString() || '';
     
@@ -57,6 +59,7 @@ export async function POST(req: NextRequest) {
       mobileNumber,
       email,
       dob,
+      address,
       story,
       location,
     });
@@ -71,21 +74,21 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Raw Image is required.' }, { status: 400 });
     }
     if (!editedFile || editedFile.size === 0) {
-      return NextResponse.json({ success: false, error: 'Edited Photo is required.' }, { status: 400 });
+      return NextResponse.json({ success: false, error: 'Final Image is required.' }, { status: 400 });
     }
 
     if (!ALLOWED_MIME_TYPES.includes(rawFile.type)) {
       return NextResponse.json({ success: false, error: 'Raw image must be a JPG, JPEG, PNG, or WEBP file.' }, { status: 400 });
     }
     if (!ALLOWED_MIME_TYPES.includes(editedFile.type)) {
-      return NextResponse.json({ success: false, error: 'Edited photo must be a JPG, JPEG, PNG, or WEBP file.' }, { status: 400 });
+      return NextResponse.json({ success: false, error: 'Final Image must be a JPG, JPEG, PNG, or WEBP file.' }, { status: 400 });
     }
 
     if (rawFile.size > MAX_FILE_SIZE) {
       return NextResponse.json({ success: false, error: 'Raw image must be smaller than 10MB.' }, { status: 400 });
     }
     if (editedFile.size > MAX_FILE_SIZE) {
-      return NextResponse.json({ success: false, error: 'Edited photo must be smaller than 10MB.' }, { status: 400 });
+      return NextResponse.json({ success: false, error: 'Final Image must be smaller than 10MB.' }, { status: 400 });
     }
 
     // 4. Duplicate Check
@@ -122,6 +125,7 @@ export async function POST(req: NextRequest) {
       mobile_number: mobileNumber,
       email,
       dob,
+      address,
       story,
       location,
       raw_image_url: rawUploadResult.publicUrl,

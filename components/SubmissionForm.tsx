@@ -22,12 +22,13 @@ const formSchema = z.object({
     }
     return age >= 13;
   }, 'You must be at least 13 years old to participate.'),
+  address: z.string().min(5, 'Address must be at least 5 characters.'),
   story: z.string()
     .min(50, 'Story must be at least 50 characters.')
     .max(1000, 'Story cannot exceed 1000 characters.'),
   location: z.string().min(1, 'Location is required.'),
   rawImage: z.any().refine((file) => file instanceof File, 'Raw Image is required.'),
-  editedImage: z.any().refine((file) => file instanceof File, 'Edited Photo is required.'),
+  editedImage: z.any().refine((file) => file instanceof File, 'Final Image is required.'),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -56,6 +57,7 @@ export default function SubmissionForm({ onSuccess }: SubmissionFormProps) {
       mobileNumber: '',
       email: '',
       dob: '',
+      address: '',
       story: '',
       location: '',
       rawImage: undefined,
@@ -91,6 +93,7 @@ export default function SubmissionForm({ onSuccess }: SubmissionFormProps) {
       formData.append('mobileNumber', values.mobileNumber);
       formData.append('email', values.email);
       formData.append('dob', values.dob);
+      formData.append('address', values.address);
       formData.append('story', values.story);
       formData.append('location', values.location);
       formData.append('rawImage', values.rawImage);
@@ -232,6 +235,25 @@ export default function SubmissionForm({ onSuccess }: SubmissionFormProps) {
                   )}
                 </div>
 
+                {/* Address */}
+                <div className="flex flex-col gap-1.5 sm:col-span-2">
+                  <label htmlFor="address" className="text-xs font-bold uppercase tracking-wider text-[#664436]">
+                    Address <span className="text-[#895158]">*</span>
+                  </label>
+                  <input
+                    id="address"
+                    type="text"
+                    placeholder="Enter your complete postal address"
+                    {...register('address')}
+                    className={`w-full px-4 py-3 rounded-xl border bg-white text-[#4A3324] font-semibold text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#895158]/35 ${
+                      errors.address ? 'border-red-500 focus:ring-red-200' : 'border-[#D1C7B7] focus:border-[#664436]'
+                    }`}
+                  />
+                  {errors.address && (
+                    <span className="text-[11px] text-red-500 font-semibold">{errors.address.message}</span>
+                  )}
+                </div>
+
               </div>
             </div>
 
@@ -314,13 +336,13 @@ export default function SubmissionForm({ onSuccess }: SubmissionFormProps) {
                   )}
                 />
 
-                {/* Edited Photo Upload */}
+                {/* Final Image Upload */}
                 <Controller
                   name="editedImage"
                   control={control}
                   render={({ field }) => (
                     <FileUpload
-                      label="Edited Photo"
+                      label="Final Image"
                       description="Your final color-graded, edited version. Max 10MB."
                       value={field.value}
                       error={errors.editedImage?.message as string}

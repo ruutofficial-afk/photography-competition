@@ -3,6 +3,7 @@ export interface SubmissionFormData {
   mobileNumber: string;
   email: string;
   dob: string; // YYYY-MM-DD
+  address: string;
   story: string;
   location: string;
   rawImage: FileList | null;
@@ -15,6 +16,7 @@ export interface SubmissionData {
   mobile_number: string;
   email: string;
   dob: string;
+  address: string;
   story: string;
   location: string;
   raw_image_url: string;

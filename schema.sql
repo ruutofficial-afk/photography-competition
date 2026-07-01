@@ -7,6 +7,7 @@ CREATE TABLE photography_contest_submissions (
     mobile_number VARCHAR(20) NOT NULL,
     email VARCHAR(255) NOT NULL,
     dob DATE NOT NULL,
+    address TEXT NOT NULL,
     story TEXT NOT NULL,
     location VARCHAR(255) NOT NULL,
     raw_image_url TEXT NOT NULL,
@@ -23,3 +24,8 @@ CREATE INDEX idx_created_at ON photography_contest_submissions(created_at);
 -- Note on Supabase Storage:
 -- You must create a storage bucket named "contest-submissions" (public or private).
 -- Inside the bucket, the folders "raw-images" and "edited-images" will be created dynamically upon upload.
+
+-- Database migration note:
+-- If you have already created the table previously, run this ALTER command to add the address column:
+-- ALTER TABLE photography_contest_submissions ADD COLUMN address TEXT NOT NULL DEFAULT '';
+

@@ -36,9 +36,9 @@ export default function Home() {
           {/* ṚUUT Logo Image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/favicon-32x32.png"
+            src="/favicon-192x192.png"
             alt="ṚUUT Logo"
-            className="w-8 h-8 object-contain"
+            className="w-9 h-9 object-contain"
           />
           <span className="font-extrabold tracking-widest text-lg uppercase text-[#664436] font-serif">
             ṚUUT
@@ -89,9 +89,12 @@ export default function Home() {
             CONTEST
           </h1>
 
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-script text-[#e28d1c] text-shadow-orange select-none mt-2 rotate-[-2deg] mb-6">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-script text-[#e28d1c] text-shadow-orange select-none mt-2 rotate-[-2deg]">
             The anti aesthetic
           </h2>
+          <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#895158] mt-2 mb-6">
+            "Make a Chaotic Spot Look Premium."
+          </p>
 
           {/* Double Lines with Side Stripes */}
           <div className="flex items-center justify-between w-full max-w-lg mb-8 gap-4 select-none">
@@ -122,10 +125,10 @@ export default function Home() {
                   Prizes & Awards
                 </span>
                 <span className="font-extrabold text-[#664436] text-sm sm:text-base leading-tight">
-                  ₹25,000 Grand Prize
+                  Jordan Shoes
                 </span>
                 <span className="text-xs text-[#664436]/70 block">
-                  + Feature in ṚUUT Community Journal
+                  For the best Anti-Aesthetic entry
                 </span>
               </div>
             </div>
@@ -161,14 +164,6 @@ export default function Home() {
             </button>
           )}
 
-          {/* Stars Footer */}
-          <div className="flex gap-1.5 mt-8 select-none">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-[#664436]">
-                <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192z" />
-              </svg>
-            ))}
-          </div>
 
         </div>
       </section>
@@ -197,9 +192,9 @@ export default function Home() {
           {/* ṚUUT Logo Image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/favicon-32x32.png"
+            src="/ruut-logo-D6BD9F.png"
             alt="ṚUUT Logo"
-            className="w-6 h-6 object-contain"
+            className="h-10 object-contain"
           />
           <span className="font-extrabold tracking-widest text-sm uppercase font-serif">
             ṚUUT

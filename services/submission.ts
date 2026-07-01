@@ -114,6 +114,7 @@ export async function insertSubmission(
         mobile_number: submission.mobile_number,
         email: submission.email.toLowerCase().trim(),
         dob: submission.dob,
+        address: submission.address,
         story: submission.story,
         location: submission.location,
         raw_image_url: submission.raw_image_url,
