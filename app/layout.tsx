@@ -33,6 +33,11 @@ export const metadata: Metadata = {
   description: 'Submit your raw and edited entries for the "The Anti Aesthetic" photography contest hosted by ṚUUT. View rules, guidelines, and submit your entry online.',
   keywords: 'photography contest, anti aesthetic, community event, submission platform, ṚUUT, raw photo, photo editing',
   authors: [{ name: 'ṚUUT Brand Community' }],
+  icons: {
+    icon: '/favicon-32x32.png',
+    shortcut: '/favicon-32x32.png',
+    apple: '/favicon-192x192.png',
+  },
   openGraph: {
     title: 'Photography Contest - The Anti Aesthetic | ṚUUT',
     description: 'Showcase your raw and edited photos for our community contest. Submit your entry online now!',
