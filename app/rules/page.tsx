@@ -185,7 +185,7 @@ export default function RulesPage() {
                     <span className="text-[11px] text-[#664436]/70 block font-semibold">Selected by Guest Judge for raw artistic merit.</span>
                   </div>
                   <div className="text-left sm:text-right shrink-0">
-                    <span className="text-xs font-extrabold text-[#895158] block uppercase">Jordan Shoes</span>
+                    <span className="text-xs font-extrabold text-[#895158] block uppercase">Air Jordan 1 Lows</span>
                     <span className="text-[10px] text-[#664436]/70 block font-semibold">+ ṚUUT Signature Hamper & feature</span>
                   </div>
                 </div>

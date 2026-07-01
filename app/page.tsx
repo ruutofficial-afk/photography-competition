@@ -126,7 +126,7 @@ export default function Home() {
                   Prizes & Awards
                 </span>
                 <span className="font-extrabold text-[#664436] text-sm sm:text-base leading-tight">
-                  Jordan Shoes
+                  Air Jordan 1 Lows
                 </span>
                 <span className="text-xs text-[#664436]/70 block">
                   For the best Anti-Aesthetic entry
@@ -229,7 +229,7 @@ export default function Home() {
                   Prizes
                 </h3>
                 <p className="text-xs leading-relaxed text-[#664436]/90 font-semibold">
-                  **Grand Winner**: Jordan Shoes + ṚUUT Signature Hamper + permanent digital feature. **Runner-Up & Public Choice**: ṚUUT Signature Hampers.
+                  **Grand Winner**: Air Jordan 1 Lows + ṚUUT Signature Hamper + permanent digital feature. **Runner-Up & Public Choice**: ṚUUT Signature Hampers.
                 </p>
               </div>
             </div>
