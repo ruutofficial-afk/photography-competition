@@ -144,3 +144,45 @@ export async function insertSubmission(
     submission_status: status,
   };
 }
+
+/**
+ * Retrieves all submissions from the MySQL database, ordered by created_at DESC.
+ */
+export async function getAllSubmissions(): Promise<SubmissionData[]> {
+  const query = `
+    SELECT 
+      id, 
+      full_name, 
+      mobile_number, 
+      email, 
+      DATE_FORMAT(dob, '%Y-%m-%d') as dob, 
+      address, 
+      story, 
+      location, 
+      raw_image_url, 
+      edited_image_url, 
+      submission_status, 
+      created_at, 
+      updated_at
+    FROM photography_contest_submissions
+    ORDER BY created_at DESC
+  `;
+  const [rows] = await pool.query(query);
+  return rows as SubmissionData[];
+}
+
+/**
+ * Updates the status of a submission in the MySQL database.
+ */
+export async function updateSubmissionStatus(
+  id: string,
+  status: 'submitted' | 'approved' | 'rejected'
+): Promise<void> {
+  const query = `
+    UPDATE photography_contest_submissions
+    SET submission_status = ?, updated_at = NOW()
+    WHERE id = ?
+  `;
+  await pool.query(query, [status, id]);
+}
+
