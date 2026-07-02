@@ -110,7 +110,7 @@ export default function Home() {
 
           {/* Brief / Description */}
           <p className="max-w-xl text-[#664436] font-semibold text-sm sm:text-base leading-relaxed mb-8">
-            Reject standard lighting, symmetrical rules, and polished filters. Show us the beauty in awkward angles, weird crops, raw environments, and grainy compositions. Give us your best "anti-aesthetic" shot.
+            We are challenging the country&apos;s best visual curators to find the most mundane, chaotic, or overlooked corners of their city and shoot them like a high-fashion editorial. Find the glamour in the grime. Curate the chaos.
           </p>
 
           {/* Info grid (Prizes and Deadlines) */}
@@ -129,7 +129,7 @@ export default function Home() {
                   Air Jordan 1 Lows
                 </span>
                 <span className="text-xs text-[#664436]/70 block">
-                  For the best Anti-Aesthetic entry
+                  + Complete ṚUUT Signature Hamper
                 </span>
               </div>
             </div>
@@ -144,10 +144,10 @@ export default function Home() {
                   Submission Deadline
                 </span>
                 <span className="font-extrabold text-[#664436] text-sm sm:text-base leading-tight">
-                  July 31, 2026
+                  July 30, 2026
                 </span>
                 <span className="text-xs text-[#664436]/70 block">
-                  Entries close 11:59 PM IST
+                  Entries close 5:00 PM IST
                 </span>
               </div>
             </div>
@@ -197,7 +197,7 @@ export default function Home() {
                   The Brief
                 </h3>
                 <p className="text-xs leading-relaxed text-[#664436]/90 font-semibold">
-                  Find an ordinary, chaotic, or "ugly" location in your city (e.g. packed street market, narrow alleyway, tea stall) and capture it using framing and lighting to make it look like a premium, luxury escape.
+                  We are challenging the country&apos;s best visual curators to find the most mundane, chaotic, or overlooked corners of their city and shoot them like a high-fashion editorial. Find the glamour in the grime. Curate the chaos.
                 </p>
               </div>
 
@@ -206,8 +206,8 @@ export default function Home() {
                   What is Allowed
                 </h3>
                 <ul className="list-disc pl-4 text-xs flex flex-col gap-1 text-[#664436]/90 font-bold">
-                  <li>Photography from any device (Smartphone, DSLR, Film).</li>
-                  <li>Lightroom color grading, exposure, crop adjustments.</li>
+                  <li>Photography from any device (Smartphone, Mirrorless, DSLR, Film).</li>
+                  <li>Standard post-processing, color grading, cropping, exposure.</li>
                 </ul>
               </div>
             </div>
@@ -219,8 +219,8 @@ export default function Home() {
                   Strictly Prohibited
                 </h3>
                 <ul className="list-disc pl-4 text-xs flex flex-col gap-1 text-red-700 font-bold">
-                  <li>AI-Generated Imagery: Zero-tolerance policy (Midjourney, generative fill, etc.).</li>
-                  <li>Digital Manipulation: Do not add or remove physical objects.</li>
+                  <li>AI-Generated Imagery: Zero-tolerance policy (Midjourney, DALL-E, etc.).</li>
+                  <li>Heavy Manipulation: Do not digitally add or remove physical objects.</li>
                 </ul>
               </div>
 
@@ -229,7 +229,7 @@ export default function Home() {
                   Prizes
                 </h3>
                 <p className="text-xs leading-relaxed text-[#664436]/90 font-semibold">
-                  **Grand Winner**: Air Jordan 1 Lows + ṚUUT Signature Hamper + permanent digital feature. **Runner-Up & Public Choice**: ṚUUT Signature Hampers.
+                  **Grand Winner**: Complete ṚUUT Signature Hamper + Air Jordan 1 Lows. **Runner-Up & People&apos;s Choice**: Exclusive ṚUUT Hampers.
                 </p>
               </div>
             </div>
