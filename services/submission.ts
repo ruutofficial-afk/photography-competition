@@ -180,7 +180,7 @@ export async function updateSubmissionStatus(
 ): Promise<void> {
   const query = `
     UPDATE photography_contest_submissions
-    SET submission_status = ?, updated_at = NOW()
+    SET submission_status = ?
     WHERE id = ?
   `;
   await pool.query(query, [status, id]);
